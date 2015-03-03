@@ -30,7 +30,7 @@ DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
   Serial.begin(9600); 
-  Serial.println("DHT22 test!");
+  Serial.println("DHT22 test!"); // Change to represent the DHT22
  
   dht.begin();
 }
@@ -66,6 +66,6 @@ void loop() {
   Serial.print(f);
   Serial.print(" *F)\t");
   Serial.print("Heat index: ");
-  Serial.print(dht.convertFtoC(hi));
+  Serial.print(dht.convertFtoC(hi)); // Return Celsius temp for heat index
   Serial.println(" *C");
 }
